@@ -64,7 +64,7 @@
         .links(edges)   //指定连线数组
         .size([width,height]) //指定范围
         .linkDistance(150)  //指定连线长度
-        .charge(-1000);  //相互之间的作用力
+        .charge(-800);  //相互之间的作用力
 
     force.start();  //开始作用
 
@@ -100,7 +100,7 @@
               .enter()
               .append("circle")
               .attr("r",function(d,i){
-                return linearr(d.din);
+                return linearr(d.dout);
               })
               .style("fill",function(d,i){
                 return color(d.loc);
